@@ -53,16 +53,20 @@
         }
 
         .btn-hero {
-    background-color: #0d6efd; /* Blue color */
-    color: #fff;
-    border: none;
-}
-.btn-hero:hover {
-    background-color: #0b5ed7; /* Slightly darker blue for hover effect */
-    color: #fff; /* Ensure text color remains white */
-    opacity: 1; /* Prevent transparency */
-    transition: all 0.3s ease; /* Smooth transition */
-}
+            background-color: #0d6efd; /* Blue color */
+            color: #fff;
+            border: none;
+        }
+        .card:hover {
+          box-shadow: 0 0 10px rgba(0,0,0,0.2);
+          transform: translateY(-5px);
+        }
+        .btn-hero:hover {
+            background-color: #0b5ed7; /* Slightly darker blue for hover effect */
+            color: #fff; /* Ensure text color remains white */
+            opacity: 1; /* Prevent transparency */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
 
         .step-icon, .feature-icon {
           font-size: 3rem; color: #0d6efd; margin-bottom: 15px; display: inline-block;
@@ -116,10 +120,11 @@
 <body>
 <nav class="navbar navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
             <img src="logo.svg" alt="TaskCalls Logo" style="height: 40px;">
         </a>
         <div class="d-flex ms-auto">
+            <a href="business.html" class="btn btn-outline-primary me-2">Corporate Plan</a>
             <a href="login.html" class="btn btn-outline-primary">Login</a>
         </div>
     </div>
@@ -217,18 +222,60 @@
 <section class="py-5 text-center fade-in">
     <div class="container">
         <h2>Designed for Busy Lives</h2>
-        <p class="mb-5">Use TaskCalls for scheduling appointments, reservations, travel inquiries, and more.</p>
-        <div class="row g-4">
-            <div class="col-md-4"><p>Schedule doctor appointments without waiting on hold.</p></div>
-            <div class="col-md-4"><p>Book restaurant reservations effortlessly.</p></div>
-            <div class="col-md-4"><p>Confirm meetings or event plans with ease.</p></div>
-            <div class="col-md-4"><p>Manage routine follow-ups and inquiries.</p></div>
-            <div class="col-md-4"><p>Avoid long waits for customer service calls.</p></div>
-            <div class="col-md-4"><p>Arrange international travel details, overcoming language and time zone
-                barriers.</p></div>
+        <p class="mb-5">Use TaskCalls for scheduling appointments, reservations, and more.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/ai-image-1.jpg" class="card-img-top" alt="Doctor Appointment">
+                    <div class="card-body">
+                        <p>Schedule doctor appointments without waiting on hold.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/ai-image-2.jpg" class="card-img-top" alt="Restaurant Reservations">
+                    <div class="card-body">
+                        <p>Book restaurant reservations effortlessly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/ai-image-3.jpg" class="card-img-top" alt="Meetings">
+                    <div class="card-body">
+                        <p>Confirm meetings or event plans with ease.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/ai-image-4.jpg" class="card-img-top" alt="Follow Ups">
+                    <div class="card-body">
+                        <p>Manage routine follow-ups and inquiries.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/ai-image-5.jpg" class="card-img-top" alt="Customer Service">
+                    <div class="card-body">
+                        <p>Avoid long waits for customer service calls.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/ai-image-6.jpg" class="card-img-top" alt="Travel">
+                    <div class="card-body">
+                        <p>Manage travel details with airlines and hotels across languages and time zones.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
 
 <section class="py-5 bg-light text-center fade-in">
     <div class="container">
@@ -244,11 +291,48 @@
 
 <section class="py-5 text-center fade-in">
     <div class="container">
-        <h2>Simple, Transparent Pricing</h2>
-        <p class="mb-4">Pay as you go: $0.5 per minute of call time. Start with just $5 credit.</p>
-        <a href="#" class="btn btn-primary">Get Started</a>
+        <h2>Flexible Pricing</h2>
+        <p class="mb-4">Choose the plan that fits your needs. For enterprise-level integration, explore our <a
+                href="business.html">Corporate Plan</a>.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3>Standard</h3>
+                        <p>Classical AI approach with separate recognition, reasoning, and synthesis.</p>
+                        <p><strong>$0.15 / minute</strong></p>
+                        <p>Start with a $5 credit.</p>
+                        <a href="register.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3>Pro</h3>
+                        <p>End-to-end neural network with Realtime API for advanced performance.</p>
+                        <p><strong>$0.50 / minute</strong></p>
+                        <p>Start with a $5 credit.</p>
+                        <a href="register.html" class="btn btn-primary">Go Pro</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3>Business</h3>
+                        <p>Ideal for teams and organizations with advanced requirements. Enjoy custom pricing, dedicated
+                            account management, and enterprise-level features such as security and compliance options,
+                            bulk usage, priority support, and more.</p>
+                        <a href="business.html" class="btn btn-primary">Corporate plan</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
+
 
 <section class="py-5 text-center fade-in">
     <div class="container">
@@ -279,6 +363,7 @@
 <footer>
     <div class="container">
         <p>Contact: <a href="mailto:support@taskcalls.com">support@taskcalls.com</a></p>
+        <p>Looking for a custom solution? Check out our <a href="business.html">Business API</a>.</p>
         <small>© 2024 TaskCalls</small>
     </div>
 </footer>
