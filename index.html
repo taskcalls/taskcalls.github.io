@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
     <title>TaskCalls - Automate Your Calls With AI</title>
     <meta name="description"
           content="Automate appointments, reservations, and travel planning with AI-driven calls. Save time, break language barriers, and let TaskCalls AI handle it.">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -24,97 +22,118 @@
             }
         }
     </script>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
         body {
-          font-family: sans-serif;
-          background-color: #fdfdfd;
+            font-family: sans-serif;
+            background-color: #fdfdfd;
         }
+
         .navbar {
-          position: sticky; top: 0; z-index: 999;
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
 
         .hero {
-          background: linear-gradient(to bottom right, #eef5ff, #ffffff);
-          padding: 100px 0;
-          text-align: center;
+            background: linear-gradient(to bottom right, #eef5ff, #ffffff);
+            padding: 100px 0;
+            text-align: center;
         }
+
         .hero h1 {
-          font-size: 4rem;
-          margin-bottom: 30px;
-          color: #333;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #333;
         }
+
         .hero p {
-          font-size: 1.3rem;
-          margin-bottom: 20px;
-          color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #666;
         }
 
         .btn-hero {
-            background-color: #0d6efd; /* Blue color */
+            background-color: #0d6efd;
             color: #fff;
             border: none;
+            transition: all 0.3s ease;
         }
-        .card:hover {
-          box-shadow: 0 0 10px rgba(0,0,0,0.2);
-          transform: translateY(-5px);
-        }
+
         .btn-hero:hover {
-            background-color: #0b5ed7; /* Slightly darker blue for hover effect */
-            color: #fff; /* Ensure text color remains white */
-            opacity: 1; /* Prevent transparency */
-            transition: all 0.3s ease; /* Smooth transition */
+            background-color: #0b5ed7;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
         }
 
         .step-icon, .feature-icon {
-          font-size: 3rem; color: #0d6efd; margin-bottom: 15px; display: inline-block;
+            font-size: 3rem;
+            color: #0d6efd;
+            margin-bottom: 15px;
+            display: inline-block;
         }
 
         .section-title {
-          margin-bottom: 40px; font-size: 2.5rem; color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #333;
         }
 
         .feature-box, .steps .col-md-4 {
-          padding: 20px;
-          border-radius: 10px;
-          transition: all 0.3s ease-in-out;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
         }
+
         .feature-box:hover, .steps .col-md-4:hover {
-          background-color: #f8f9fa;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         footer {
-          background: #eef5ff; padding: 30px 0; text-align: center;
+            background: #eef5ff;
+            padding: 30px 0;
+            text-align: center;
         }
+
         .fade-in {
-          opacity:0;
-          transform: translateY(20px);
-          transition: all 0.6s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
         }
+
         .fade-in.visible {
-          opacity:1; transform: translateY(0);
+            opacity: 1;
+            transform: translateY(0);
         }
-      @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2.2rem; /* Reduce header font size */
-      line-height: 1.2; /* Adjust line spacing */
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 1rem; /* Smaller paragraph font */
-      margin-bottom: 15px;
-    }
-    .btn-hero, .btn-outline-primary {
-      font-size: 1rem; /* Adjust button font size */
-      padding: 10px; /* Smaller padding for buttons */
-    }
-    .navbar .d-flex {
-      flex-direction: column;
-      gap: 10px; /* Add spacing between buttons */
-    }
-  }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+
+            .btn-hero, .btn-outline-primary {
+                font-size: 1rem;
+                padding: 10px;
+            }
+
+            .navbar .d-flex {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -123,7 +142,9 @@
         <a class="navbar-brand" href="index.html">
             <img src="logo.svg" alt="TaskCalls Logo" style="height: 40px;">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -135,25 +156,18 @@
     </div>
 </nav>
 
-
-
-
 <section class="hero fade-in">
     <div class="container">
         <h1>Free Yourself from Calls – Let AI Handle It!</h1>
         <p>Automate appointments, reservations, and travel planning with ease across languages and time zones.</p>
-        <ul class="list-unstyled my-3">
-            <li>✓ Saves you hours every week</li>
-            <li>✓ No more waiting on hold</li>
-            <li>✓ Works seamlessly across languages and time zones</li>
-        </ul>
-        <p class="text-muted">Trusted by hundreds of busy professionals</p>
-        <div class="d-flex align-items-center flex-column flex-md-row gap-2">
-            <a href="register.html" class="btn btn-hero btn-lg w-100 w-md-auto">Start Your AI Call Now</a>
-            <a href="register.html" class="btn btn-outline-primary btn-lg w-100 w-md-auto">Get Started</a>
+        <p class="text-muted fst-italic">“I saved hours each week by letting TaskCalls handle the phone.” – Alex G.</p>
+        <div class="d-flex align-items-center flex-column flex-md-row gap-2 justify-content-center mt-3">
+            <a href="register.html" class="btn btn-hero btn-lg">Get Started Now</a>
+            <a href="#pricing" class="btn btn-outline-primary btn-lg">View Pricing</a>
         </div>
     </div>
 </section>
+
 
 <section class="py-5 text-center fade-in">
     <div class="container">
@@ -177,6 +191,8 @@
         </div>
     </div>
 </section>
+
+
 
 <section class="py-5 bg-light fade-in">
     <div class="container">
@@ -233,7 +249,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/ai-image-1.jpg" class="card-img-top" alt="Doctor Appointment">
+                    <img src="img/ai-image-1.jpg" class="card-img-top" alt="Doctor Appointment" loading="lazy">
                     <div class="card-body">
                         <p>Schedule doctor appointments without waiting on hold.</p>
                     </div>
@@ -241,7 +257,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/ai-image-2.jpg" class="card-img-top" alt="Restaurant Reservations">
+                    <img src="img/ai-image-2.jpg" class="card-img-top" alt="Restaurant Reservations" loading="lazy">
                     <div class="card-body">
                         <p>Book restaurant reservations effortlessly.</p>
                     </div>
@@ -249,7 +265,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/ai-image-3.jpg" class="card-img-top" alt="Meetings">
+                    <img src="img/ai-image-3.jpg" class="card-img-top" alt="Meetings" loading="lazy">
                     <div class="card-body">
                         <p>Confirm meetings or event plans with ease.</p>
                     </div>
@@ -257,7 +273,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/ai-image-4.jpg" class="card-img-top" alt="Follow Ups">
+                    <img src="img/ai-image-4.jpg" class="card-img-top" alt="Follow Ups" loading="lazy">
                     <div class="card-body">
                         <p>Manage routine follow-ups and inquiries.</p>
                     </div>
@@ -265,7 +281,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/ai-image-5.jpg" class="card-img-top" alt="Customer Service">
+                    <img src="img/ai-image-5.jpg" class="card-img-top" alt="Customer Service" loading="lazy">
                     <div class="card-body">
                         <p>Avoid long waits for customer service calls.</p>
                     </div>
@@ -273,16 +289,15 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/ai-image-6.jpg" class="card-img-top" alt="Travel">
+                    <img src="img/ai-image-6.jpg" class="card-img-top" alt="Travel" loading="lazy">
                     <div class="card-body">
-                        <p>Manage travel details with airlines and hotels across languages and time zones.</p>
+                        <p>Handle airline and hotel details across time zones and languages.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 <section class="py-5 bg-light text-center fade-in">
     <div class="container">
@@ -296,10 +311,11 @@
     </div>
 </section>
 
-<section class="py-5 text-center fade-in">
+<section id="pricing" class="py-5 text-center fade-in">
     <div class="container">
         <h2>Flexible Pricing</h2>
-        <p class="mb-4">Choose the plan that fits your needs. For enterprise-level integration, explore our <a href="business.html">Corporate Plan</a>.</p>
+        <p class="mb-4">Choose the plan that fits your needs. For enterprise-level integration, explore our <a
+                href="business.html">Corporate Plan</a>.</p>
         <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
             <div class="col">
                 <div class="card h-100">
@@ -325,7 +341,6 @@
     </div>
 </section>
 
-
 <section class="py-5 text-center fade-in">
     <div class="container">
         <h2>Frequently Asked Questions</h2>
@@ -336,7 +351,28 @@
                 <h5>How is the pricing calculated?</h5>
                 <p>We charge $0.5 per minute of call time, starting with a $5 credit. No hidden fees.</p>
                 <h5>What languages do you support?</h5>
-                <p>TaskCalls can handle calls in multiple languages, adapting to language and time zone needs.</p>
+                <p>We adapt to multiple languages and time zones to suit your needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Key Stats -->
+<section class="py-5 text-center fade-in">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h3>10,000+</h3>
+                <p>Hours of Calls Automated</p>
+            </div>
+            <div class="col-md-4">
+                <h3>98%</h3>
+                <p>Positive User Feedback</p>
+            </div>
+            <div class="col-md-4">
+                <h3>24/7</h3>
+                <p>Availability Across Time Zones</p>
             </div>
         </div>
     </div>
@@ -363,16 +399,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     function showFadeInElements() {
-      document.querySelectorAll('.fade-in').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 50) {
-          el.classList.add('visible');
-        }
-      });
+        document.querySelectorAll('.fade-in').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                el.classList.add('visible');
+            }
+        });
     }
-    document.addEventListener('DOMContentLoaded', () => {
-      showFadeInElements();
-    });
+
+    document.addEventListener('DOMContentLoaded', showFadeInElements);
     window.addEventListener('scroll', showFadeInElements);
     window.addEventListener('resize', showFadeInElements);
 </script>
